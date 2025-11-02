@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>معرض الصور - EGA Metal</title>
+  <link rel="icon" type="image/png" href="logo1.png">
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Changa', sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      pointer-events: none;
+      user-select: none;
+      display: block;
+    }
+
+    /* الوسام القاطع لنصف الصورة */
+    .image-wrapper::before {
+      content: "EGA Metal";
+      position: absolute;
+      top: 50%;
+      left: -50%;
+      width: 200%;
+      height: 40px;
+      background: rgba(128, 0, 128, 0.7);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      transform: rotate(-45deg) translateY(-50%);
+      z-index: 2;
+      pointer-events: none;
+      user-select: none;
+      font-family: 'Changa', sans-serif;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 45px;
+      background: rgba(128, 0, 128, 0.6);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      z-index: 9999;
+      backdrop-filter: blur(5px);
+    }
+
+    .gallery {
+      padding-top: 60px;
+    }
+
+    .watermark {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      opacity: 0.1;
+      font-size: 16px;
+      color: red;
+      z-index: 9999;
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onmousedown="return false">
+ 
+
+  <header>
+    <div class="logo">
+      <img src="logo1.png" alt="شعار" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">عودة للرئيسية</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery">
+    <h2>معرض أعمالنا</h2>
+    <div class="gallery-grid">
+      <!-- الصور داخل image-wrapper ليظهر الوسام -->
+      <!-- نموذج -->
+<div class="image-gallery">
+  <div class="image-box"><img src="mould.jpg" alt="mould">
+    <div class="image-box"><img src="111.jpg" alt="111"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="222.jpg" alt="222"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="333.jpg" alt="333"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="444.jpg" alt="444"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="555.jpg" alt="555"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="666.jpg" alt="666"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="777.jpg" alt="777"><div class="image-label-under">EGA-METAL</div></div>
+
+  <!-- من 1.jpg إلى 65.jpg -->
+  <div class="image-box"><img src="1.jpg" alt="1"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="2.jpg" alt="2"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="3.jpg" alt="3"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="4.jpg" alt="4"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="5.jpg" alt="5"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="6.jpg" alt="6"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="7.jpg" alt="7"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="8.jpg" alt="8"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="9.jpg" alt="9"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="10.jpg" alt="10"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="11.jpg" alt="11"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="12.jpg" alt="12"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="13.jpg" alt="13"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="14.jpg" alt="14"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="15.jpg" alt="15"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="16.jpg" alt="16"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="17.jpg" alt="17"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="18.jpg" alt="18"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="19.jpg" alt="19"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="20.jpg" alt="20"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="21.jpg" alt="21"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="22.jpg" alt="22"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="23.jpg" alt="23"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="24.jpg" alt="24"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="25.jpg" alt="25"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="26.jpg" alt="26"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="27.jpg" alt="27"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="28.jpg" alt="28"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="29.jpg" alt="29"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="30.jpg" alt="30"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="31.jpg" alt="31"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="32.jpg" alt="32"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="33.jpg" alt="33"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="34.jpg" alt="34"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="35.jpg" alt="35"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="36.jpg" alt="36"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="37.jpg" alt="37"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="38.jpg" alt="38"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="39.jpg" alt="39"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="40.jpg" alt="40"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="41.jpg" alt="41"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="42.jpg" alt="42"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="43.jpg" alt="43"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="44.jpg" alt="44"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="45.jpg" alt="45"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="46.jpg" alt="46"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="47.jpg" alt="47"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="48.jpg" alt="48"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="49.jpg" alt="49"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="50.jpg" alt="50"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="51.jpg" alt="51"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="52.jpg" alt="52"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="53.jpg" alt="53"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="54.jpg" alt="54"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="55.jpg" alt="55"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="56.jpg" alt="56"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="57.jpg" alt="57"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="58.jpg" alt="58"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="59.jpg" alt="59"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="60.jpg" alt="60"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="61.jpg" alt="61"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="62.jpg" alt="62"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="63.jpg" alt="63"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="64.jpg" alt="64"><div class="image-label-under">EGA-METAL</div></div>
+  <div class="image-box"><img src="65.jpg" alt="65"><div class="image-label-under">EGA-METAL</div></div>
+
+    
+</div>
+
+
+    </div>
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة © 2025 - EGA Metal</p>
+  </footer>
+
+  <div class="watermark">EGA Metal - محتوى محمي</div>
+
+  <script>
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        document.body.innerHTML = '<div style="text-align:center;padding:100px;font-size:22px;color:red;">🚫 تم إخفاء المحتوى لحمايته.</div>';
+      }
+    });
+
+    window.addEventListener("blur", () => {
+      document.body.style.filter = "blur(30px)";
+    });
+
+    window.addEventListener("focus", () => {
+      document.body.style.filter = "none";
+    });
+
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('paste', e => e.preventDefault());
+  </script>
+</body>
+</html>

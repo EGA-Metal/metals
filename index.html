@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EGA-Metal</title>
+  <link rel="icon" type="image/png" href="logo1.png" />
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="quran-text">﴿ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا ﴾</div>
+
+  <header>
+    <div class="logo">
+      <img src="logo1.png" alt="شعار" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="gallery.html">المعرض</a></li>
+        <li><a href="#faq">الاسئلة</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <section class="hero-section" id="home">
+    <div class="hero-content">
+      <h1>نصنع طلبك بفن واحتراف</h1>
+      <a href="#contact" class="cta-button">احجز تصميمك الآن</a>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <h2>من نحن</h2>
+    <p>مصنع استيل لتشكيل  المعادن اليدويه</p>
+  </section>
+
+  <section class="services" id="services">
+    <h2>خدماتنا</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>تواصل معنا</h3>
+        <p>عبر رقم الهاتف أو البريد الإلكتروني أو الواتساب، في الأسفل.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>الأسئلة الشائعة</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>كم يستغرق تنفيذ التصميم؟</h3>
+        <p>يعتمد على نوع الطلب.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>تواصل معنا</h2>
+    <div class="contact-form" id="contact-form">
+      <input type="text" id="name" placeholder="اسمك الكامل" required />
+      <input type="email" id="email" placeholder="بريدك الإلكتروني" required />
+      <textarea id="message" placeholder="اكتب رسالتك / رقم هاتفك" rows="5" required></textarea>
+      <button onclick="sendWhatsApp()" class="whatsapp-button">إرسال عبر واتساب</button>
+      <p id="success-msg" style="display: none;">✅ تم تجهيز الرسالة، سيتم فتح واتساب الآن</p>
+    </div>
+
+    <div class="contact-info">
+  <p>📞 هاتف: <strong>01200565426</strong></p>
+  <p>💬 واتساب: <a href="https://wa.me/+201200565426" target="_blank">اضغط للتواصل</a></p>
+  <p>📍 العنوان: <strong>المؤسسة / شارع حافظ إسماعيل، متفرع من شارع الشركات</strong></p>
+
+  
+</div>
+
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة © 2025 - EGA Metal</p>
+  </footer>
+
+  <script>
+    function sendWhatsApp() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const successMsg = document.getElementById("success-msg");
+
+      if (!name || !email || !message) {
+        alert("من فضلك املأ كل الحقول.");
+        return;
+      }
+
+      const text = `الاسم: ${name}%0Aالبريد: ${email}%0Aالرسالة: ${message}`;
+      const phone = "201200565426";
+      const url = `https://wa.me/${phone}?text=${text}`;
+
+      successMsg.style.display = "block";
+
+      setTimeout(() => {
+        window.open(url, "_blank");
+      }, 1000);
+    }
+  </script>
+<canvas id="sparkCanvas"></canvas>
+<script src="main.js"></script>
+</body>
+</html>
